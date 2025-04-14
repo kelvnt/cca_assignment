@@ -12,7 +12,7 @@ id_010,2020-01-13 02:21:00,cca_07,cca_03,cca_14,,cca_07,Assigned first choice
 id_011,2020-01-13 02:21:00,cca_23,cca_22,cca_12,,cca_23,Assigned first choice
 id_012,2020-01-13 02:21:00,cca_01,cca_09,cca_07,,cca_01,Assigned first choice
 id_013,2020-01-13 02:21:00,cca_21,cca_20,cca_22,,cca_21,Assigned first choice
-id_014,2020-01-13 02:21:00,cca_10,cca_09,cca_25,cca_10,cca_10,Assigned first choice
+id_014,2020-01-13 02:21:00,cca_10,cca_09,cca_25,cca_10,cca_10,Directly assigned
 id_015,2020-01-13 02:21:00,cca_11,cca_17,cca_07,,cca_11,Assigned first choice
 id_016,2020-01-13 02:21:00,cca_08,cca_20,cca_04,,cca_08,Assigned first choice
 id_017,2020-01-13 02:21:00,cca_03,cca_19,cca_21,,cca_03,Assigned first choice
@@ -29,7 +29,7 @@ id_027,2020-01-13 02:21:00,cca_11,cca_17,cca_04,,cca_11,Assigned first choice
 id_028,2020-01-13 02:21:00,cca_19,cca_08,cca_10,,cca_08,Assigned second choice
 id_029,2020-01-13 02:21:00,cca_04,cca_19,cca_01,,cca_04,Assigned first choice
 id_030,2020-01-13 02:21:00,cca_05,cca_21,cca_07,,cca_05,Assigned first choice
-id_031,2020-01-13 02:21:00,cca_23,cca_11,cca_21,cca_23,cca_23,Assigned first choice
+id_031,2020-01-13 02:21:00,cca_23,cca_11,cca_21,cca_23,cca_23,Directly assigned
 id_032,2020-01-13 02:21:00,cca_05,cca_23,cca_03,,cca_23,Assigned second choice
 id_033,2020-01-13 02:21:00,cca_09,cca_07,cca_25,,cca_25,Assigned third choice
 id_034,2020-01-13 04:21:00,cca_01,cca_19,cca_23,,cca_19,Assigned second choice
@@ -72,7 +72,7 @@ id_070,2020-01-13 02:21:00,cca_02,cca_23,cca_21,,cca_02,Assigned first choice
 id_071,2020-01-13 02:21:00,cca_04,cca_21,cca_22,,cca_04,Assigned first choice
 id_072,2020-01-13 02:21:00,cca_23,cca_08,cca_12,,cca_23,Assigned first choice
 id_073,2020-01-13 02:21:00,cca_17,cca_22,cca_14,,cca_17,Assigned first choice
-id_074,2020-01-13 02:21:00,cca_12,cca_24,cca_01,cca_12,cca_12,Assigned first choice
+id_074,2020-01-13 02:21:00,cca_12,cca_24,cca_01,cca_12,cca_12,Directly assigned
 id_075,2020-01-13 02:21:00,cca_15,cca_09,cca_21,,cca_15,Assigned first choice
 id_076,2020-01-13 02:21:00,cca_06,cca_11,cca_25,,cca_06,Assigned first choice
 id_077,2020-01-13 02:21:00,cca_21,cca_08,cca_11,,cca_21,Assigned first choice
@@ -87,7 +87,7 @@ id_085,2020-01-13 02:21:00,cca_09,cca_15,cca_19,,cca_09,Assigned first choice
 id_086,2020-01-13 02:21:00,cca_07,cca_10,cca_18,,cca_10,Assigned second choice
 id_087,2020-01-13 02:21:00,cca_23,cca_25,cca_17,,cca_23,Assigned first choice
 id_088,2020-01-13 02:21:00,cca_08,cca_05,cca_15,,cca_08,Assigned first choice
-id_089,2020-01-13 02:21:00,cca_16,cca_11,cca_06,cca_16,cca_16,Assigned first choice
+id_089,2020-01-13 02:21:00,cca_16,cca_11,cca_06,cca_16,cca_16,Directly assigned
 id_090,2020-01-13 02:21:00,cca_06,cca_13,cca_03,,cca_06,Assigned first choice
 id_091,2020-01-13 02:21:00,cca_22,cca_07,cca_15,,cca_22,Assigned first choice
 id_092,2020-01-13 02:21:00,cca_03,cca_10,cca_24,,cca_03,Assigned first choice
@@ -161,7 +161,7 @@ id_159,2020-01-13 02:21:00,cca_15,cca_17,cca_24,,cca_15,Assigned first choice
 id_160,2020-01-13 02:21:00,cca_11,cca_12,cca_10,,cca_12,Assigned second choice
 id_161,2020-01-13 02:21:00,cca_20,cca_21,cca_23,,cca_20,Assigned first choice
 id_162,2020-01-13 02:21:00,cca_21,cca_01,cca_02,,cca_21,Assigned first choice
-id_163,2020-01-13 02:21:00,cca_19,cca_11,cca_20,cca_19,cca_19,Assigned first choice
+id_163,2020-01-13 02:21:00,cca_19,cca_11,cca_20,cca_19,cca_19,Directly assigned
 id_164,2020-01-13 02:21:00,cca_16,cca_03,cca_05,,cca_16,Assigned first choice
 id_165,2020-01-13 02:21:00,cca_21,cca_04,cca_03,,cca_04,Assigned second choice
 id_166,2020-01-13 02:21:00,cca_11,cca_04,cca_18,,cca_11,Assigned first choice
@@ -190,7 +190,7 @@ id_188,2020-01-13 02:21:00,cca_05,cca_06,cca_17,,cca_06,Assigned second choice
 id_189,2020-01-13 02:21:00,cca_06,cca_20,cca_05,,cca_06,Assigned first choice
 id_190,2020-01-13 02:21:00,cca_02,cca_22,cca_12,,cca_02,Assigned first choice
 id_191,2020-01-13 02:21:00,cca_21,cca_13,cca_19,,cca_21,Assigned first choice
-id_192,2020-01-13 02:21:00,cca_10,cca_22,cca_01,cca_10,cca_10,Assigned first choice
+id_192,2020-01-13 02:21:00,cca_10,cca_22,cca_01,cca_10,cca_10,Directly assigned
 id_193,2020-01-13 02:21:00,cca_07,cca_09,cca_10,,cca_07,Assigned first choice
 id_194,2020-01-13 02:21:00,cca_21,cca_03,cca_23,,cca_21,Assigned first choice
 id_195,2020-01-13 02:21:00,cca_19,cca_07,cca_21,,cca_19,Assigned first choice

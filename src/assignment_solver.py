@@ -15,7 +15,7 @@ REWARD_POLICY = {
     "choice_1": 3,
     "choice_2": 2,
     "choice_3": 1,
-    "no_choice": -10  # Penalty to strongly avoid unassigned
+    "none_of_choices": -10  # Penalty to strongly avoid unassigned
 }
 
 
@@ -75,7 +75,7 @@ class AssignmentSolver:
         """
         Creates a reward matrix for (number_of_students) x (number_of_seats).
         If a seat (i.e., CCA) is in the student's top 3, assign the corresponding reward.
-        Otherwise, assign 'no_choice' penalty.
+        Otherwise, assign 'none_of_choices' penalty.
 
         Args:
             students_df (pd.DataFrame): DataFrame containing each student's top 3 choices.
@@ -86,7 +86,7 @@ class AssignmentSolver:
         """
         num_students = len(students_df)
         num_seats = len(seats_df)
-        reward_matrix = np.full((num_students, num_seats), self.reward_policy.get("no_choice", 0.0))
+        reward_matrix = np.full((num_students, num_seats), self.reward_policy.get("none_of_choices", 0.0))
 
         for i, student in students_df.iterrows():
             for choice in ["choice_1", "choice_2", "choice_3"]:
@@ -234,7 +234,7 @@ class AssignmentSolver:
         first_choice_count = 0
         second_choice_count = 0
         third_choice_count = 0
-        no_choice_count = 0
+        none_of_choices_count = 0
 
         for student_id, assigned_cca, _ in assignments:
             row = students_df.loc[students_df["student_id"] == student_id].iloc[0]
@@ -245,9 +245,9 @@ class AssignmentSolver:
             elif assigned_cca == row["choice_3"]:
                 third_choice_count += 1
             else:
-                no_choice_count += 1
+                none_of_choices_count += 1
 
-        return first_choice_count, second_choice_count, third_choice_count, no_choice_count
+        return first_choice_count, second_choice_count, third_choice_count, none_of_choices_count
 
 
     def calculate_reward(
@@ -256,7 +256,7 @@ class AssignmentSolver:
         students_df: pd.DataFrame
     ) -> int:
         """
-        Calculates the total reward from assignments, including penalties for no_choice assignments.
+        Calculates the total reward from assignments, including penalties for none_of_choices assignments.
 
         Args:
             assignments (List[Tuple[str, str, str]]): List of (student_id, assigned_cca, remark).
@@ -273,7 +273,7 @@ class AssignmentSolver:
                     total_reward += self.reward_policy.get(choice, 0)
                     break
             else:
-                total_reward += self.reward_policy.get("no_choice", 0)
+                total_reward += self.reward_policy.get("none_of_choices", 0)
         return total_reward
 
 
@@ -296,8 +296,7 @@ class AssignmentSolver:
         for i, row in self.students_df.iterrows():
             direct_cca = row.get("direct_assignment", "")
             if isinstance(direct_cca, str) and direct_cca.strip():
-                # Assume direct assignments are always first choice
-                self.direct_assigned.append((row["student_id"], direct_cca, "Assigned first choice"))
+                self.direct_assigned.append((row["student_id"], direct_cca, "Directly assigned"))
                 if direct_cca in self.vacancies_df["cca"].values:
                     cca_index = self.vacancies_df[self.vacancies_df["cca"] == direct_cca].index[0]
                     old_vacancy = self.vacancies_df.at[cca_index, "vacant_spots"]
@@ -326,10 +325,10 @@ class AssignmentSolver:
         logger.info(f"\nTotal Students: {len(self.students_df)}")
         logger.info(f"Total Reward: {total_reward}\n")
         logger.info(f"Direct assignments: {len(self.direct_assigned)}")
-        logger.info(f"Assigned to 1st Choice: {first_c}")
-        logger.info(f"Assigned to 2nd Choice: {second_c}")
-        logger.info(f"Assigned to 3rd Choice: {third_c}")
-        logger.info(f"Assigned to None of Their Choices: {none_c}\n")
+        logger.info(f"Assigned to 1st choice: {first_c}")
+        logger.info(f"Assigned to 2nd choice: {second_c}")
+        logger.info(f"Assigned to 3rd choice: {third_c}")
+        logger.info(f"Assigned to none of their choices: {none_c}\n")
 
         # Prepare CSV with remarks
         assignment_df = pd.DataFrame(final_assignments, columns=["student_id", "assigned_cca", "remarks"])

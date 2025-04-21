@@ -341,6 +341,8 @@ class AssignmentSolver:
         out.to_csv(output_file, index=False)
         logger.info(f"Final assignments saved to {output_file}")
 
+        return out
+
 
 def main():
     solver = AssignmentSolver(

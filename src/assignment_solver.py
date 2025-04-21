@@ -277,10 +277,7 @@ class AssignmentSolver:
         return total_reward
 
 
-    def run(
-        self,
-        output_file: str = "final_assignments.csv"
-    ) -> None:
+    def run(self):
         """
         Executes the solver pipeline:
           1) Loads data.
@@ -290,6 +287,9 @@ class AssignmentSolver:
           5) Combines direct assignments with optimized results.
           6) Calculates and logs stats.
           7) Outputs final data to CSV with remarks.
+
+        Returns:
+            pandas dataframe of final assignments
         """
         self.load_data()
 
@@ -338,8 +338,6 @@ class AssignmentSolver:
             on="student_id",
             how="left"
         )
-        out.to_csv(output_file, index=False)
-        logger.info(f"Final assignments saved to {output_file}")
 
         return out
 
